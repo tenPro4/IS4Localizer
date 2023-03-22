@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Localizer Testing</title>
+    @await RenderSectionAsync("styles", required: false)
+</head>
+<body>
+   <h1>@Localizer["Home"]</h1>
+    @await RenderSectionAsync("scripts", required: false)
+    @RenderBody()
+    @await Html.PartialAsync("Common/SelectLanguage")
+</body>
+</html>
